@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- External css -->
+    <link rel="stylesheet" href="../css/common.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <!-- Font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- font for inspitation(logo) and Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inspiration&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .cart-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+    }
+      .cart {
+        width: 65%;
+        background: white;
+        border-radius: 8px;
+      }
+      .cart table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .cart th,
+      .cart td {
+        padding: 10px;
+      }
+      .cart th {
+        background: #7d5ba6;
+        color: white;
+        text-align: center;
+      }
+      .cart td:not(:first-child) {
+        text-align: center;
+      }
+      .cart td:first-child {
+        text-align: left;
+      }
+      .cart img {
+        width: 100px;
+        height: auto;
+      }
+      .cart-summary {
+        width: 30%;
+        background: #e5c6a0;
+        padding: 54px 35px;
+        border: 1px solid black;
+        border-radius: 40px;
+        text-align: center;
+      }
+      .cart-summary .gap-summary {
+        gap: 50px !important;
+      }
+      .cart-summary .prod-summary {
+        gap: 12px;
+        display: flex;
+        flex-direction: column;
+      }
+      .checkout-btn {
+        background: #7d5ba6;
+        color: white;
+        padding: 10px;
+        border: none;
+        width: 100%;
+        cursor: pointer;
+        margin-top: 10px;
+      }
+      .edit-delete span {
+        color: red;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+      @media (min-width: 0px) and (max-width: 900px) {
+        .cart-container {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+      }
+      .cart {
+        width: 100%;
+        background: white;
+        border-radius: 8px;
+      }
+      .cart-summary {
+        width: 400px;
+        padding: 54px 35px;
+        text-align: center;
+        margin: 60px auto;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <div>
+        <h3 id="logo">E-store</h3>
+      </div>
+      <div class="nav .md-icon">
+        <nav class="nav-link">
+          <a href="../index/Home.html">Home</a>
+          <a href="../products/products.html">Products</a>
+          <a href="../products/contactus.html">Contact us</a>
+          <a href="../products/cart.html">Cart</a>
+          <a href="../signup/login.html" id="login">Login</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="cart-container ">
+        <div class="cart">
+          <table>
+            <tr>
+              <th colspan="2">Product & Details</th>
+              <th>Quantity</th>
+              <th>Total Price</th>
+            </tr>
+            <tr>
+              <td><img src="../images/Laptop1.jpeg" alt="Laptop" /></td>
+              <td style="text-align: left">
+                <strong>JBL Tune 520BT</strong><br />
+                Price: $29<br />
+                Color: Grey<br />
+                Type: Laptop<br />
+                <span class="edit-delete"
+                  ><span>Edit</span> <span>Delete</span></span
+                >
+              </td>
+              <td>2</td>
+              <td>$58</td>
+            </tr>
+            <tr>
+              <td><img src="../images/Laptop2.avif" alt="Laptop" /></td>
+              <td style="text-align: left">
+                <strong>JBL Tune 520BT</strong><br />
+                Price: $29<br />
+                Color: Grey<br />
+                Type: Laptop<br />
+                <span class="edit-delete"
+                  ><span>Edit</span> <span>Delete</span></span
+                >
+              </td>
+              <td>1</td>
+              <td>$999</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="cart-summary">
+          <div class="gap-summary">
+            <h3>Cart Summary</h3>
+          </div>
+          <div class="prod-summary">
+            <p>Total Price: $157</p>
+            <p>Tax Amount: $0.5</p>
+            <p><strong>Grand Total: $157.5</strong></p>
+          </div>
+          <div class="gap-summary">
+            <button class="checkout-btn">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer id="footer">
+      <div class="f-container">
+        <div class="footer-content flex flex-wrap">
+          <!-- Footer Description -->
+          <div class="footer-detail">
+            <div class="fgroup">
+              <div class="f-b">
+                <span class="footer-p">
+                  Your go-to destination for top electronics, innovative
+                  gadgets, and expert support - all in one place.
+                </span>
+              </div>
+              <!-- Social Media Links -->
+              <div class="social-networks">
+                <div class="f-img">
+                  <img src="../images/facebook.png" alt="" />
+                </div>
+                <div class="f-img">
+                  <img src="../images/linked in.png" alt="" />
+                </div>
+                <div class="f-img">
+                  <img src="../images/instagram.png" alt="" />
+                </div>
+                <div class="f-img">
+                  <img src="../images/gmail.png" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="fgroup1">
+              <div class="fgroup2">
+                <ul>
+                  <li>E-Seeker</li>
+                  <li>Resistor</li>
+                  <li>Login</li>
+                  <li>All Products</li>
+                </ul>
+              </div>
+              <div class="fgroup2">
+                <ul>
+                  <li>Categories</li>
+                  <li>Headphone</li>
+                  <li>Mobile Phone</li>
+                  <li>Television</li>
+                  <li>Laptop</li>
+                  <li>and more...</li>
+                </ul>
+              </div>
+
+              <!-- Contact Information -->
+              <div class="fgroup2">
+                <div class="partner-info mb-3 md:mb-0">
+                  <span class="block text-lg font-semibold">Contact Us</span>
+                  <div class="phone">
+                    <a href="tel:015917658">Phone Number: 015917658</a>
+                  </div>
+                  <div class="phone">
+                    <a href="tel:9818051853">Mobile Number: 9818051853</a>
+                  </div>
+                  <div class="mail">
+                    <a href="mailto:info@houseofjobnp.com">
+                      Email: info@houseofjobnp.com
+                    </a>
+                  </div>
+                  <div class="address">
+                    <span> Address: Maitidevi, Kathmandu, </span>
+                  </div>
+                  <div>Nepal</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr />
+
+        <!-- Footer Bottom Section -->
+        <div class="footer-bottom d-flex justify-between items-center">
+          <a
+            href="http://tech.ebazarnepal.com/"
+            target="_blank"
+            rel="noreferrer"
+            class="text-white justify-center w-full md:w-auto"
+          >
+            <span class="text-xs text-gray-100"
+              >Powered By E-Bazar Nepal &amp; Technology</span
+            >
+          </a>
+          <div class="d-flex flex-wrap bottom-list justify-center">
+            <a>Terms of Services</a>
+
+            <a>Privacy Policy</a>
+          </div>
+        </div>
+
+        <!-- Copyright Section -->
+        <div class="last">
+          <div class="text-center">
+            <p style="color: white">Copyright © 2023,House of Jobs</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
